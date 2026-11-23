@@ -16,7 +16,9 @@ class WidgetTree extends StatelessWidget {
         title: const Text('GroupApp'),
         actions: [
           IconButton(
-            icon: const Icon(Icons.brightness_6),
+            icon: isDarkModeNotifier.value
+                ? const Icon(Icons.light_mode)
+                : const Icon(Icons.dark_mode),
             onPressed: () {
               isDarkModeNotifier.value = !isDarkModeNotifier.value;
             },
